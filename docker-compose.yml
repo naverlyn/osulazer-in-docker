@@ -1,0 +1,9 @@
+services:
+  app:
+    image: test-osu-in-docker:latest
+    build: .
+    environment:
+      - DISPLAY=${DISPLAY}
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix
+    network_mode: host
